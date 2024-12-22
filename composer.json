@@ -5,7 +5,7 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^7.3",
+        "php": "^7.3||^8.2",
         "akaunting/laravel-setting": "^1.2",
         "barryvdh/laravel-dompdf": "^1.0",
         "fideloper/proxy": "^4.4",
@@ -21,6 +21,7 @@
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/breeze": "^1.1",
+        "laravel/dusk": "^6.25",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
