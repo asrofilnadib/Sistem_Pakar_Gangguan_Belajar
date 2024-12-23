@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
 	DashboardController,
 	DiagnosaController,
-	RiwayatController, 
+	RiwayatController,
 	PenyakitController,
 	GejalaController,
 	RuleController,
@@ -56,8 +56,8 @@ Route::group([
 	// menu rules
 	Route::get('/rules/{id}', [RuleController::class, 'index'])->name('rules');
 	Route::post('/rules/{id}/update', [RuleController::class, 'update'])->name('rules.update');
-	
-	
+
+
 	// Profile menu
 	Route::view('/profile', 'admin.profile')->name('profile');
 	Route::post('/profile', [DashboardController::class, 'profile_update'])->name('profile');

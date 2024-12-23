@@ -22,7 +22,7 @@ class DashboardController extends Controller
     /**
     * Show dashboard
     *
-    * @return \Illuminate\Http\Response
+    * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
     */
     public function index()
     {
@@ -100,7 +100,7 @@ class DashboardController extends Controller
             }
 
             $data['password'] = Hash::make($request->new_password);
-        } 
+        }
 
         // for update avatar
         if($request->avatar) {
@@ -110,10 +110,10 @@ class DashboardController extends Controller
                 unlink(storage_path('app/public/'.auth()->user()->avatar));
             }
         }
-        
+
         // update profile
         auth()->user()->update($data);
-        
+
         return redirect()->back()->with('success', 'Profile updated!');
     }
 
@@ -139,6 +139,6 @@ class DashboardController extends Controller
         }
 
         return '';
-        
+
     }
 }
