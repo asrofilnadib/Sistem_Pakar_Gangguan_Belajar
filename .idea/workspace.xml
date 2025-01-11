@@ -4,18 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc420ea1-5211-4a33-ac7b-11266450290f" name="Changes" comment="">
+    <list default="true" id="fc420ea1-5211-4a33-ac7b-11266450290f" name="Changes" comment="debug sync permission">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/459824fd-970b-4003-9540-acfed73b6025.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/459824fd-970b-4003-9540-acfed73b6025.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jeki.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jeki.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DiagnosaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DiagnosaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RiwayatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RiwayatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/schema/mysql-schema.dump" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/CreateAdminUserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CreateAdminUserSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/diagnosa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/diagnosa.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gejala/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gejala/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/penyakit/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/penyakit/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/riwayat/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/riwayat/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pdf/riwayat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pdf/riwayat.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +29,9 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/resources/views/admin/diagnosa.blade.php" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -184,6 +191,7 @@
     "database.data.extractors.current.export.id": "CSV-Groovy.csv.groovy",
     "database.data.extractors.current.id": "CSV-Groovy.csv.groovy",
     "git-widget-placeholder": "dev",
+    "last_opened_file_path": "D:/Proyek/capaian_karyaa",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -226,11 +234,43 @@
       <workItem from="1734934212008" duration="4275000" />
       <workItem from="1734938529673" duration="4536000" />
       <workItem from="1734943105509" duration="27000" />
-      <workItem from="1734943150661" duration="200000" />
+      <workItem from="1734943150661" duration="3769000" />
+      <workItem from="1735010728178" duration="278000" />
+      <workItem from="1735011141881" duration="19000" />
+      <workItem from="1735819218616" duration="67000" />
+      <workItem from="1735968300134" duration="432000" />
+      <workItem from="1736262262169" duration="4514000" />
+      <workItem from="1736314639455" duration="6000" />
+      <workItem from="1736536377830" duration="9892000" />
+      <workItem from="1736572704530" duration="9537000" />
     </task>
+    <task id="LOCAL-00001" summary="debug sync permission">
+      <option name="closed" value="true" />
+      <created>1734943446225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734943446225</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="debug sync permission" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug sync permission" />
   </component>
 </project>

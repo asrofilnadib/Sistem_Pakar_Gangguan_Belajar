@@ -1177,7 +1177,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="333" parent="1" name="sistem_pakar">
-      <LastIntrospectionLocalTimestamp>2024-12-23.08:01:04</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-01-10.19:30:10</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <user id="334" parent="1" name="root">
@@ -15795,7 +15795,7 @@ guard_name</ColNames>
       <UnderlyingIndexName>permissions_name_guard_name_unique</UnderlyingIndexName>
     </key>
     <column id="3132" parent="577" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>55</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint(20) unsigned|0s</StoredType>
