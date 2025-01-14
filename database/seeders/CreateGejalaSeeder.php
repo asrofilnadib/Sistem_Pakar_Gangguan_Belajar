@@ -16,88 +16,104 @@ class CreateGejalaSeeder extends Seeder
     {
         $data = [
             [
-                'nama' => 'Demam',
+                'nama' => 'Kesulitan membaca kata-kata panjang',
                 'kode' => 'G001'
             ],
             [
-                'nama' => 'Demam tinggi',
+                'nama' => 'Membaca huruf atau kata secara terbalik',
                 'kode' => 'G002'
             ],
             [
-                'nama' => 'Batuk',
+                'nama' => 'Bingung membedakan huruf yang mirip',
                 'kode' => 'G003'
             ],
             [
-                'nama' => 'Diare',
+                'nama' => 'Sulit mengingat urutan huruf dalam alfabet',
                 'kode' => 'G004'
             ],
             [
-                'nama' => 'Mual',
+                'nama' => 'Sulit memahami isi bacaan',
                 'kode' => 'G005'
             ],
             [
-                'nama' => 'Muntah',
+                'nama' => 'Sulit Membaca Tulisan Tangan',
                 'kode' => 'G006'
             ],
             [
-                'nama' => 'Nyeri otot',
+                'nama' => 'Ukuran atau Bentuk Tulisan Tidak Konsisten',
                 'kode' => 'G007'
             ],
             [
-                'nama' => 'Sakit perut',
+                'nama' => 'Kesulitan Menulis dengan Kecepatan yang Sama',
                 'kode' => 'G008'
             ],
             [
-                'nama' => 'Kram otot',
+                'nama' => 'Melewatkan atau Salah Menulis Huruf',
                 'kode' => 'G009'
             ],
             [
-                'nama' => 'Pilek',
+                'nama' => 'Tidak Nyaman Saat Menulis Lama',
                 'kode' => 'G010'
             ],
             [
-                'nama' => 'Muntah',
+                'nama' => 'Kesulitan Menghitung Penjumlahan atau Pengurangan',
                 'kode' => 'G011'
             ],
             [
-                'nama' => 'Tubuh menggigil',
+                'nama' => 'Sulit Memahami Pecahan atau Pembagian',
                 'kode' => 'G012'
             ],
             [
-                'nama' => 'Tubuh nyeri',
+                'nama' => 'Sulit Mengingat Tabel Perkalian',
                 'kode' => 'G013'
             ],
             [
-                'nama' => 'Penyakit kuning',
+                'nama' => 'Bingung Menulis Angka Besar',
                 'kode' => 'G014'
             ],
             [
-                'nama' => 'Nyeri sendi',
+                'nama' => 'Sulit Mengikuti Langkah-Langkah Soal Matematika',
                 'kode' => 'G015'
             ],
             [
-                'nama' => 'Nyeri perut',
+                'nama' => 'Kesulitan  Memegang Barang Stabil',
                 'kode' => 'G016'
             ],
             [
-                'nama' => 'Trombosit turun',
+                'nama' => 'Kesulitan dengan Koordinasi Tubuh',
                 'kode' => 'G017'
             ],
             [
-                'nama' => 'Muncul bintik merah',
+                'nama' => 'Gerakan Lambat atau Kurang Seimbang',
                 'kode' => 'G018'
             ],
             [
-                'nama' => 'Gatal',
+                'nama' => 'Sulit Melakukan Hal Kecil',
                 'kode' => 'G019'
             ],
             [
-                'nama' => 'Sakit di persendian',
+                'nama' => 'Kesulitan Menggambar di Dalam Garis',
                 'kode' => 'G020'
             ],
             [
-                'nama' => 'Sakit kepala',
+                'nama' => 'Sulit Berkonsentrasi Lama',
                 'kode' => 'G021'
+            ],
+            [
+                'nama' => 'Sering Lupa Membawa Perlengkapan Sekolah',
+                'kode' => 'G022'
+            ],
+            [
+                'nama' => 'Tidak Bisa Duduk Diam Lama',
+                'kode' => 'G023'
+            ],
+            [
+                'nama' => 'Sering Bertindak Tanpa Berpikir',
+                'kode' => 'G024'
+            ],
+            [
+                'nama' => 'Mudah Terganggu Hal-Hal Kecil',
+                'kode' => 'G025'
             ]
         ];
 

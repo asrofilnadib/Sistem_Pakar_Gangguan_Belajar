@@ -5,11 +5,11 @@
 	<x-alert type="success" message="{{ session()->get('success') }}" />
 	@endif
 	<x-card>
-		<x-slot name="option">
+		{{--<x-slot name="option">
 			<div class="btn btn-success add">
 				<i class="fas fa-plus mr-1"></i> Tambahkan Gejala
 			</div>
-		</x-slot>
+		</x-slot>--}}
 		<table class="table table-hover border">
 			<thead>
 				<th>Kode</th>
