@@ -16,41 +16,30 @@ class CreatePenyakitSeeder extends Seeder
     {
         $data = [
             [
-                'nama' => 'Influenza',
+                'nama' => 'Disleksia',
                 'kode' => 'P001',
-                'penyebab' => 'Secara langsung apabila cipratan air dari mulut (droplet) mengenai orang lain—saat bersin, batuk, atau berbicara. Penularan secara tidak langsung terjadi apabila Anda menyentuh permukaan atau benda yang telah terkontaminasi virus flu, lalu tangan Anda menyentuh mulut dan hidung sehingga virus masuk ke dalam tubuh.'
+                'solusi' => 'Membantu anak melalui terapi membaca fonetik, dukungan teknologi seperti text-to-speech, serta bimbingan guru berpengalaman. Deteksi dini dan aktivitas membaca rutin sejak kecil akan membangun fondasi keterampilan membaca yang lebih baik.'
             ],
             [
-                'nama' => 'Demam berdarah dengue(DBD)',
+                'nama' => 'Disgrafia',
                 'kode' => 'P002',
-                'penyebab' => 'Virus dengue masuk ke tubuh manusia melalui gigitan nyamuk Aedes aegypti. Jumlah nyamuk Aedes aegypti biasanya meningkat pada awal musim hujan.'
+                'solusi' => 'Mengembangkan keterampilan motorik halus melalui terapi menulis, penggunaan alat tulis ergonomis, dan teknologi seperti keyboard. Rangsang kemampuan menulis dengan permainan kreatif dan latihan sejak dini.'
             ],
             [
-                'nama' => 'Hepatitis',
+                'nama' => 'Diskalkulia',
                 'kode' => 'P003',
-                'penyebab' => 'Melalui makanan atau minuman yang tidak bersih, misalnya es batu yang proses pembuatannya terkontaminasi virus hepatitis. Penularan virus hepatitis B dan hepatitis C melalui darah dan cairan tubuh yang terinfeksi; seperti transfusi darah, hubungan seks, pembuatan tato dan tindik, serta injeksi.'
+                'solusi' => 'Mengatasi kesulitan matematika dengan pendekatan visual dan alat bantu hitung seperti sempoa, serta bimbingan khusus yang praktis. Permainan angka sederhana sejak kecil akan menanamkan logika matematika yang lebih kuat.'
             ],
             [
-                'nama' => 'Malaria',
+                'nama' => 'Dispraksia',
                 'kode' => 'P004',
-                'penyebab' => 'Parasit plasmodium dibawa dan disebarkan oleh nyamuk Anopheles yang kemudian menggigit manusia.'
+                'solusi' => 'Meningkatkan koordinasi tubuh melalui terapi okupasi, latihan fisik seperti berenang atau senam, serta dukungan alat bantu. Stimulasi motorik dini dengan permainan koordinasi akan membantu anak berkembang lebih percaya diri.'
             ],
             [
-                'nama' => 'Campak',
+                'nama' => 'Attention Deficit Hyperactivity Disorder',
                 'kode' => 'P005',
-                'penyebab' => 'Virus penyebab campak menular melalui percikan air liur penderita saat batuk atau bersin. Selain itu, bisa karena Anda menyentuh benda yang telah terpercik air liur penderita'
-            ],
-            [
-                'nama' => 'Tifus',
-                'kode' => 'P006',
-                'penyebab' => 'Virus penyebab campak menular melalui percikan air liur penderita saat batuk atau bersin. Selain itu, bisa karena Anda menyentuh benda yang telah terpercik air liur penderita'
-            ],
-            [
-                'nama' => 'Cacingan',
-                'kode' => 'P007',
-                'penyebab' => 'Telur cacing dapat masuk melalui kuku dan tangan yang tidak bersih yang kemudian menyentuh mulut atau makanan. Selain itu, cacing juga bisa masuk lewat makanan yang tidak dibersihkan dengan baik sebelum dimasak serta penggunaan barang yang sudah terkontaminasi cacing (handuk, pakaian, atau sprei).'
+                'solusi' => 'Membantu anak fokus melalui terapi perilaku, manajemen waktu yang terstruktur, serta aktivitas fisik dan relaksasi seperti yoga. Menciptakan rutinitas yang konsisten dan membatasi paparan gadget berlebihan dapat membantu menjaga keseimbangan perilaku dan energi.'
             ]
-
         ];
 
         Penyakit::insert($data);

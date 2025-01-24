@@ -14,7 +14,7 @@
             <thead>
             <th>Kode</th>
             <th>Nama penyakit</th>
-            <th>Penyebab</th>
+            <th>Solusi</th>
             <th></th>
             </thead>
             <tbody>
@@ -98,7 +98,7 @@
             <div class="row mt-2">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="penyebab">Keterangan penyebab</label>
+                        <label for="penyebab">Keterangan Solusi</label>
                         <textarea name="penyebab" cols="30" rows="6" class="form-control"></textarea>
                     </div>
                 </div>
