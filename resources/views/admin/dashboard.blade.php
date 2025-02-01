@@ -4,35 +4,35 @@
     </x-slot>
 
     <section class="row">
-        <x-card-sum 
-            text="Total User" 
-            value="{{ App\Models\User::count() }}" 
-            icon="users" 
+        <x-card-sum
+            text="Total User"
+            value="{{ App\Models\User::count() }}"
+            icon="users"
             color="success"
         />
-        <x-card-sum 
-            text="Total Diagnosa" 
-            value="{{ App\Models\Riwayat::count() }}" 
-            icon="stethoscope" 
+        <x-card-sum
+            text="Total Diagnosa"
+            value="{{ App\Models\Riwayat::count() }}"
+            icon="stethoscope"
             color="primary"
         />
-        <x-card-sum 
-            text="Daftar Penyakit" 
-            value="{{ App\Models\Penyakit::count() }}" 
-            icon="th-list" 
+        <x-card-sum
+            text="Daftar Penyakit"
+            value="{{ App\Models\Penyakit::count() }}"
+            icon="th-list"
             color="warning"
         />
-        <x-card-sum 
-            text="Daftar Gejala" 
-            value="{{ App\Models\Gejala::count() }}" 
-            icon="th-list" 
+        <x-card-sum
+            text="Daftar Gejala"
+            value="{{ App\Models\Gejala::count() }}"
+            icon="th-list"
             color="danger"
         />
     </section>
 
     <section class="row">
         {{-- log activity section --}}
-        <div class="col-md-6">
+        {{--<div class="col-md-6">
             <x-card>
                 <x-slot name="title">
                     Log Activity
@@ -53,10 +53,10 @@
                     </tbody>
                 </table>
             </x-card>
-        </div>
+        </div>--}}
 
         {{-- chart section --}}
-        <div class="col-md-6">
+        <div class="col-md-9">
             <!-- Area Charts -->
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">

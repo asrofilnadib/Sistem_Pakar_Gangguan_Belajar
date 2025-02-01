@@ -73,10 +73,11 @@ class RiwayatController extends Controller
       return ($carry === null || $item['hasil_cf'] > $carry['hasil_cf']) ? $item : $carry;
     });
 
-    $penyebab = null;
     if ($diagnosa_tertinggi) {
       $penyakit = \App\Models\Penyakit::where('kode',$diagnosa_tertinggi['kode_penyakit'])->first();
-      $penyebab = $penyakit ? $penyakit->penyebab : null;
+      if ($penyakit){
+        $solusi = $penyakit->solusi;
+      }
     }
 
     // Siapkan data gejala dengan CF Combine
@@ -136,7 +137,7 @@ class RiwayatController extends Controller
 
 //    \dd($data_diagnosa, $diagnosa_tertinggi, $gejala_cf_data);
 
-    return view('admin.riwayat.show', compact('riwayat', 'diagnosa_tertinggi', 'gejala_cf_data', 'penyebab'));
+    return view('admin.riwayat.show', compact('riwayat', 'diagnosa_tertinggi', 'gejala_cf_data', 'solusi'));
   }
 
 }

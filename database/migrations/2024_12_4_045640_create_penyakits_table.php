@@ -17,7 +17,7 @@ class CreatePenyakitsTable extends Migration
             $table->id();
             $table->string('kode');
             $table->string('nama');
-            $table->text('penyebab');
+            $table->text('solusi');
         });
     }
 

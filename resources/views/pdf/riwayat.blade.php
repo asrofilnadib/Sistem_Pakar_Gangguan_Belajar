@@ -42,7 +42,7 @@
 </head>
 
 <body>
-  @php
+@php
   $riwayat = App\Models\Riwayat::find($id);
   $data_diagnosa = unserialize($riwayat->hasil_diagnosa);
   $cf_max = unserialize($riwayat->cf_max);
@@ -98,67 +98,44 @@
   $month = $currentDate->format('F'); // Bulan dalam format teks (misalnya Januari, Februari, dll)
   $year = $currentDate->format('Y'); // Tahun
 @endphp
-  {{--
-  {{ ($diagnosa_tertinggi['gejala']) }} --}}
+{{--
+{{ ($diagnosa_tertinggi['gejala']) }} --}}
 
 
-<div class="header-section" style="border-bottom: 2px solid black; padding-bottom: 10px; display: flex; align-items: center; justify-content: center; text-align: left;">
+<div class="header-section"
+     style="border-bottom: 2px solid black; padding-bottom: 10px; display: flex; align-items: center; justify-content: center; text-align: left;">
   <!-- Logo di kiri -->
   <img src="{{ base_path('resources/views/pdf/Logo Sekolah.png') }}" style="height: 80px; margin-right: 20px;">
 
   <!-- Teks Header -->
   <div>
-    <h3 style="margin: 0; font-weight: bold; font-size: 26px; text-align: center;">YAYASAN ISLAM ASY SYARIFIYYAH BOJONGGEDE</h3>
-    <h4 style="margin: 5px 0; font-weight: normal; font-size: 22px; text-align: center;">SMP ISLAM PLUS ASY SYARIFIYYAH</h4>
-    <p style="margin: 5px 0; font-size: 16px; text-align: center;">Sekretariat: Jln. Alternatif Pemda Kp. Pulo Rt04/01 Desa Kedung Waringin Kec. Bojonggede Kab. Bogor</p>
-    <p style="margin: 5px 0; font-size: 16px; text-align: center;">Prop. Jawa Barat Indonesia Kode Pos. 16922 Telp. 081380012001 / 08951325740236</p>
+    <h3 style="margin: 0; font-weight: bold; font-size: 26px; text-align: center;">YAYASAN ISLAM ASY SYARIFIYYAH
+      BOJONGGEDE</h3>
+    <h4 style="margin: 5px 0; font-weight: normal; font-size: 22px; text-align: center;">SMP ISLAM PLUS ASY
+      SYARIFIYYAH</h4>
+    <p style="margin: 5px 0; font-size: 16px; text-align: center;">Sekretariat: Jln. Alternatif Pemda Kp. Pulo Rt04/01
+      Desa Kedung Waringin Kec. Bojonggede Kab. Bogor</p>
+    <p style="margin: 5px 0; font-size: 16px; text-align: center;">Prop. Jawa Barat Indonesia Kode Pos. 16922 Telp.
+      081380012001 / 08951325740236</p>
   </div>
 </div>
 
 
+<p class="mb-4">
+  <b>Nama :</b> {{ $riwayat->nama }}
+</p>
+<p class="mb-4">
+  <b>Tanggal :</b> {{ $riwayat->created_at->format('d M Y, H:m:s A') }}
+</p>
 
-
-  <p class="mb-4">
-    <b>Nama :</b> {{ $riwayat->nama }}
-  </p>
-  <p class="mb-4">
-    <b>Tanggal :</b> {{ $riwayat->created_at->format('d M Y, H:m:s A') }}
-  </p>
-
-  @if($diagnosa_tertinggi)
+@if($diagnosa_tertinggi)
   <div class="card card-body shadow-none p-0 mt-5 border">
-    <div class="card-header bg-primary text-white p-2">
+    {{--<div class="card-header bg-primary text-white p-2">
       <h6 class="font-weight-bold">Penyakit: {{ $diagnosa_tertinggi['nama_penyakit'] }}
         ({{ $diagnosa_tertinggi['kode_penyakit'] }})</h6>
-    </div>
-    <table class="table table-hover">
-      <thead class="thead-light">
-        <tr>
-          <th>Nama Gejala</th>
-          <th>CF Combine</th>
-          <th>CF Total</th>
-          <th>Nilai CF Akhir</th>
-        </tr>
-      </thead>
-      <tbody>
-        @foreach($gejala_cf_data as $gejala)
-        <tr>
-          <td>{{ $gejala['nama_gejala'] }}</td>
-          <td>{{ $gejala['cf1'] !== null ? number_format($gejala['cf1'], 3) : '-' }}</td>
-          <td>{{ $gejala['cf2'] !== null ? number_format($gejala['cf2'], 3) : '-' }}</td>
-          <td>{{ number_format($gejala['cf_combine'], 3) }}</td>
-        </tr>
-        @endforeach
-      </tbody>
-      <tfoot class="font-weight-bold">
-        <tr>
-          <td colspan="3" class="text-right">Nilai CF Total</td>
-          <td><span class="text-danger">{{ number_format($diagnosa_tertinggi['hasil_cf'], 3) }}</span></td>
-        </tr>
-      </tfoot>
-    </table>
+    </div>--}}
   </div>
-  <div class="mt-5">
+  <div class="my-4">
     <div class="alert alert-success">
       <h5 class="font-weight-bold">Kesimpulan</h5>
       <p>Berdasarkan gejala yang kamu pilih atau alami dan aturan yang telah ditentukan oleh pakar, diagnosa tertinggi
@@ -168,10 +145,16 @@
       </p>
     </div>
   </div>
-  @else
+    <?php
+      $penyakit = \App\Models\Penyakit::where('kode', $diagnosa_tertinggi['kode_penyakit'])->first()
+    ?>
+  <div class="mt-5">
+    {{ $penyakit->solusi }}
+  </div>
+@else
   <p class="text-center mt-5">Tidak ada diagnosa yang ditemukan.</p>
-  @endif
-  <div class="footer-section" style="text-align: right; margin-top: 50px; padding-right: 50px;">
+@endif
+<div class="footer-section" style="text-align: right; margin-top: 50px; padding-right: 50px;">
   <p style="margin: 0;">
     {{ session('user_location', 'Jakarta') }}, {{ \Carbon\Carbon::now()->locale('id')->isoFormat('dddd, D MMMM YYYY') }}
   </p>
@@ -179,10 +162,5 @@
   <div style="height: 80px;"></div> <!-- Ruang kosong untuk tanda tangan -->
   <p style="margin: 0;">Abdul Latip S.Hi</p>
 </div>
-
-
-
-
 </body>
-
 </html>

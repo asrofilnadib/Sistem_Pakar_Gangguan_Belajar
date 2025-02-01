@@ -10,6 +10,7 @@ use App\Http\Controllers\{
 	RuleController,
 	UserController
 };
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::redirect('/', '/login');
 

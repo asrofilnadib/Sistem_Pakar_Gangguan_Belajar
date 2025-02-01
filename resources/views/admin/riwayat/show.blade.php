@@ -86,7 +86,7 @@
       </div>
 
       <div class="mt-5">
-        @if($penyebab)
+        @if($solusi)
           <div class="alert alert-success">
             <h5 class="font-weight-bold">Kesimpulan</h5>
             <p>Berdasarkan dari gejala yang kamu pilih atau alami juga berdasarkan Role/Basis aturan yang sudah ditentukan
@@ -94,7 +94,7 @@
               tinggi yakni <b>{{ number_format(unserialize($riwayat->cf_max)[0], 3) }}
                 ({{ number_format(unserialize($riwayat->cf_max)[0], 3) * 100 }}%)</b> yaitu
               <b>{{ $diagnosa_tertinggi['nama_penyakit'] }} ({{ $diagnosa_tertinggi['kode_penyakit'] }})</b>.</p>
-            <p><b>Penyebab:</b> {{ $penyebab }}</p>
+            <p><b>Penyebab:</b> {{ $solusi }}</p>
 {{--            <p><b>Solusi:</b> {{ $solusi['solusi'] }}</p>--}}
           </div>
           <div class="mt-3 text-center">
