@@ -4,19 +4,18 @@
 	@if(session()->has('success'))
 	<x-alert type="success" message="{{ session()->get('success') }}" />
 	@endif
-  <div class="card mb-4">
-    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-      <h6 class="m-0 font-weight-bold text-danger">All Member</h6>
-      <div>
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-danger">All Member</h6>
+    <div>
         {{-- print user --}}
-        <a href="#" target="_blank" class="btn btn-primary btn-sm">
-          <i class="fas fa-print mr-1"></i> Print
+        <a href="{{ route('admin.member.print') }}" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fas fa-print mr-1"></i> Print
         </a>
         <a href="{{ route('admin.member.create') }}" class="btn btn-success btn-sm">
-          <i class="fas fa-plus"></i> Add Member
+            <i class="fas fa-plus"></i> Add Member
         </a>
-      </div>
     </div>
+</div>
     <div class="card-body">
       <table class="display responsive myTable" id="myTable">
         <thead>
@@ -113,10 +112,10 @@
         };
 
         const exportButton = [
-          {extend: 'copyHtml5', title: 'copy'},
-          {extend: 'csvHtml5', title: 'Data User Sistem Pakar SMP Islam'},
-          {extend: 'excelHtml5', title: 'Data User Sistem Pakar SMP Islam'},
-          // {extend: 'pdfHtml5', title: 'Data User Sistem Pakar SMP Islam'},
+          // {extend: 'copyHtml5', title: 'copy'},
+          // {extend: 'csvHtml5', title: 'Data User Sistem Pakar SMP Islam'},
+          // {extend: 'excelHtml5', title: 'Data User Sistem Pakar SMP Islam'},
+          // {extend: 'pdfHtml5', title: 'Data User Sistem Pakar SMP Islam'}, salah ni
         ];
 
         const buttonConfig = exportButton.map(button => ({

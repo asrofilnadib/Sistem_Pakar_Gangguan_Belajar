@@ -38,6 +38,9 @@
       border-top: 1px solid #000;
       width: 200px;
     }
+    .black-text{
+      color:black;
+    }
   </style>
 </head>
 
@@ -89,9 +92,6 @@
     dd('Key tidak ditemukan di data_diagnosa', $key_diagnosa, $data_diagnosa);
   }
 
-
-
-
   $currentDate = \Carbon\Carbon::now();
   $dayOfWeek = $currentDate->format('l'); // Menampilkan nama hari (misalnya Senin, Selasa, dll)
   $date = $currentDate->format('d'); // Tanggal
@@ -101,30 +101,21 @@
 {{--
 {{ ($diagnosa_tertinggi['gejala']) }} --}}
 
-
 <div class="header-section"
-     style="border-bottom: 2px solid black; padding-bottom: 10px; display: flex; align-items: center; justify-content: center; text-align: left;">
-  <!-- Logo di kiri -->
-  <img src="{{ base_path('resources/views/pdf/Logo Sekolah.png') }}" style="height: 80px; margin-right: 20px;">
-
-  <!-- Teks Header -->
+     style="border-bottom: 2px solid black; padding-bottom: 10px; text-align: center;">
+  <img src="{{ base_path('resources/views/pdf/Logo Sekolah.png') }}" style="height: 80px; margin-bottom: 10px;">
   <div>
-    <h3 style="margin: 0; font-weight: bold; font-size: 26px; text-align: center;">YAYASAN ISLAM ASY SYARIFIYYAH
-      BOJONGGEDE</h3>
-    <h4 style="margin: 5px 0; font-weight: normal; font-size: 22px; text-align: center;">SMP ISLAM PLUS ASY
-      SYARIFIYYAH</h4>
-    <p style="margin: 5px 0; font-size: 16px; text-align: center;">Sekretariat: Jln. Alternatif Pemda Kp. Pulo Rt04/01
-      Desa Kedung Waringin Kec. Bojonggede Kab. Bogor</p>
-    <p style="margin: 5px 0; font-size: 16px; text-align: center;">Prop. Jawa Barat Indonesia Kode Pos. 16922 Telp.
-      081380012001 / 08951325740236</p>
+    <h3 style="margin: 0; font-weight: bold; font-size: 26px; color: black;">YAYASAN ISLAM ASY SYARIFIYYAH BOJONGGEDE</h3>
+    <h4 style="margin: 5px 0; font-weight: normal; font-size: 22px; color: black;">SMP ISLAM PLUS ASY SYARIFIYYAH</h4>
+    <p style="margin: 5px 0; font-size: 16px; color: black;">Jln. Alternatif Pemda Kp. Pulo, Desa Kedung Waringin Kec. Bojonggede Kab. Bogor</p>
   </div>
 </div>
 
 
-<p class="mb-4">
+<p class="mb-4 black-text">
   <b>Nama :</b> {{ $riwayat->nama }}
 </p>
-<p class="mb-4">
+<p class="mb-4 black-text">
   <b>Tanggal :</b> {{ $riwayat->created_at->format('d M Y, H:m:s A') }}
 </p>
 
@@ -145,22 +136,25 @@
       </p>
     </div>
   </div>
-    <?php
-      $penyakit = \App\Models\Penyakit::where('kode', $diagnosa_tertinggi['kode_penyakit'])->first()
-    ?>
-  <div class="mt-5">
-    {{ $penyakit->solusi }}
+  <?php
+    $penyakit = \App\Models\Penyakit::where('kode', $diagnosa_tertinggi['kode_penyakit'])->first()
+  ?>
+  <div class="mt-5 black-text">
+    <div class="alert alert-primary" style="border: 2px solid #007bff; border-radius: 5px; padding: 15px;">
+      <h5 class="font-weight-bold">Solusi</h5>
+      <p style="margin: 0;">{{ $penyakit->solusi }}</p>
+    </div>
   </div>
 @else
   <p class="text-center mt-5">Tidak ada diagnosa yang ditemukan.</p>
 @endif
 <div class="footer-section" style="text-align: right; margin-top: 50px; padding-right: 50px;">
-  <p style="margin: 0;">
+  <p class="black-text" style="margin: 0;">
     {{ session('user_location', 'Jakarta') }}, {{ \Carbon\Carbon::now()->locale('id')->isoFormat('dddd, D MMMM YYYY') }}
   </p>
-  <p style="margin: 10px 0;">Kepala Sekolah</p>
-  <div style="height: 80px;"></div> <!-- Ruang kosong untuk tanda tangan -->
-  <p style="margin: 0;">Abdul Latip S.Hi</p>
+  <p class="black-text" style="margin: 10px 0;">Kepala Sekolah</p>
+  <div style="height: 80px;"></div> 
+  <p class="black-text" style="margin: 0;">Abdul Latip S.Hi</p>
 </div>
 </body>
 </html>

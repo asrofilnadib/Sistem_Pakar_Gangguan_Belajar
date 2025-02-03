@@ -39,6 +39,7 @@ Route::group([
 	Route::get('/member/{id}/edit', [UserController::class, 'edit'])->name('member.edit');
 	Route::post('/member/{id}/update', [UserController::class, 'update'])->name('member.update');
 	Route::post('/member/{id}/delete', [UserController::class, 'destroy'])->name('member.delete');
+	Route::get('/member/print', [UserController::class, 'print'])->name('member.print');
 
 	// menu penyakit
 	Route::get('/penyakit', [PenyakitController::class, 'index'])->name('penyakit');
